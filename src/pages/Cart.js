@@ -21,12 +21,11 @@ const Cart = () => {
 
   // Quantity handler
   const handleQtyChange = (product, type) => {
+    const { id, qty } = product;
     if (type === 'inc') {
-      dispatch(updateQty({ id: product.id, qty: product.qty + 1 }));
-    } else {
-      if (product.qty > 1) {
-        dispatch(updateQty({ id: product.id, qty: product.qty - 1 }));
-      }
+      dispatch(updateQty({ id, qty: qty + 1 }));
+    } else if (qty > 1) {
+      dispatch(updateQty({ id, qty: qty - 1 }));
     }
   };
 
@@ -58,6 +57,7 @@ const Cart = () => {
                     <h5 className="mb-1">{item.name}</h5>
                     <div className="d-flex align-items-center">
                       <button
+                        type="button"
                         onClick={() => handleQtyChange(item, 'dec')}
                         className="btn btn-sm btn-outline-secondary"
                       >
@@ -65,6 +65,7 @@ const Cart = () => {
                       </button>
                       <span className="mx-2">{item.qty}</span>
                       <button
+                        type="button"
                         onClick={() => handleQtyChange(item, 'inc')}
                         className="btn btn-sm btn-outline-secondary"
                       >
@@ -78,10 +79,12 @@ const Cart = () => {
                     ${parsePrice(item.sale || item.price).toFixed(2)}
                   </p>
                   <button
+                    type="button"
                     onClick={() => handleRemove(item.id)}
                     className="btn btn-outline-danger"
+                    aria-label="Remove item"
                   >
-                    <i className="fas fa-trash"></i>
+                    <i className="fas fa-trash" />
                   </button>
                 </div>
               </div>
