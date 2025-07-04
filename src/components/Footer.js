@@ -21,34 +21,34 @@ const Footer = () => {
               craftsmanship, innovation, and timeless style.
             </p>
             <div className="d-flex gap-2 social-icon">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-youtube"></i></a>
-              <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
+              <Link to="/"><i className="fab fa-facebook-f"></i></Link>
+              <Link to="/"><i className="fab fa-instagram"></i></Link>
+              <Link to="/"><i className="fab fa-youtube"></i></Link>
+              <Link to="/"><i className="fa-brands fa-x-twitter"></i></Link>
             </div>
           </div>
 
           {/* Links Column 1 */}
           <div className="col-md-2 col-6 mb-4">
             <ul className="list-unstyled common_ul">
-              <li><a href="#" className="text-decoration-none">About Us</a></li>
-              <li><a href="#" className="text-decoration-none">Services</a></li>
-              <li><a href="#" className="text-decoration-none">Blog</a></li>
-              <li><a href="#" className="text-decoration-none">Brands</a></li>
-              <li><a href="#" className="text-decoration-none">Shop</a></li>
-              <li><a href="#" className="text-decoration-none">Contact Us</a></li>
+              <li><Link to="/" className="text-decoration-none">About Us</Link></li>
+              <li><Link to="/" className="text-decoration-none">Services</Link></li>
+              <li><Link to="/" className="text-decoration-none">Blog</Link></li>
+              <li><Link to="/" className="text-decoration-none">Brands</Link></li>
+              <li><Link to="/" className="text-decoration-none">Shop</Link></li>
+              <li><Link to="/" className="text-decoration-none">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Links Column 2 */}
           <div className="col-md-2 col-6 mb-4">
             <ul className="list-unstyled common_ul">
-              <li><a href="#" className="text-decoration-none">Support</a></li>
-              <li><a href="#" className="text-decoration-none">Knowledge Base</a></li>
-              <li><a href="#" className="text-decoration-none">Live Chat</a></li>
-              <li><a href="#" className="text-decoration-none">Return/Exchange</a></li>
-              <li><a href="#" className="text-decoration-none">Shipping Policy</a></li>
-              <li><a href="#" className="text-decoration-none">Sitemap</a></li>
+              <li><Link to="/" className="text-decoration-none">Support</Link></li>
+              <li><Link to="/" className="text-decoration-none">Knowledge Base</Link></li>
+              <li><Link to="/" className="text-decoration-none">Live Chat</Link></li>
+              <li><Link to="/" className="text-decoration-none">Return/Exchange</Link></li>
+              <li><Link to="/" className="text-decoration-none">Shipping Policy</Link></li>
+              <li><Link to="/" className="text-decoration-none">Sitemap</Link></li>
             </ul>
           </div>
 
@@ -74,8 +74,8 @@ const Footer = () => {
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center border-top border-white mt-3 copy-rights">
           <p className="mb-0">© 2025 Nex Watch. All rights reserved.</p>
           <div className="d-flex gap-3">
-            <a href="#" className="text-decoration-none">Terms &amp; Condition</a>
-            <a href="#" className="text-decoration-none">Privacy Policy</a>
+            <Link to="/" className="text-decoration-none">Terms &amp; Condition</Link>
+            <Link to="/" className="text-decoration-none">Privacy Policy</Link>
           </div>
         </div>
       </div>

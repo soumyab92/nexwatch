@@ -15,7 +15,7 @@ const PageBanner = ({ title }) => {
       <div className="container">
         <h2 className="fw-bold">{title}</h2>
         <p className="mt-2">
-          <a href="/" className="text-white text-decoration-none">Home</a>
+          <Link to="/" className="text-white text-decoration-none">Home</Link>
           {paths.map((p, i) => (
             <span key={i}> / {decodeURIComponent(p.charAt(0).toUpperCase() + p.slice(1).replaceAll('-', ' '))}</span>
           ))}

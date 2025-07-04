@@ -16,7 +16,7 @@ const AboutUs = () => {
               Whether you're dressing for success or embracing the everyday, we have the perfect 
               piece for your wrist.
             </p>
-            <a href="#">Learn More</a>
+            <Link to="/">Learn More</Link>
 
             <ul>
               <li>
