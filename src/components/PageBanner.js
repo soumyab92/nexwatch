@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const PageBanner = ({ title }) => {
   const location = useLocation();
@@ -11,13 +11,22 @@ const PageBanner = ({ title }) => {
   const paths = location.pathname.split('/').filter(Boolean);
 
   return (
-    <section className="page_banner text-white py-5" style={{ backgroundImage: "url('/images/banner-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section
+      className="page_banner text-white py-5"
+      style={{
+        backgroundImage: "url('/images/banner-bg.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="container">
         <h2 className="fw-bold">{title}</h2>
         <p className="mt-2">
           <Link to="/" className="text-white text-decoration-none">Home</Link>
           {paths.map((p, i) => (
-            <span key={i}> / {decodeURIComponent(p.charAt(0).toUpperCase() + p.slice(1).replaceAll('-', ' '))}</span>
+            <span key={i}>
+              {' '} / {decodeURIComponent(p.charAt(0).toUpperCase() + p.slice(1).replaceAll('-', ' '))}
+            </span>
           ))}
         </p>
       </div>
