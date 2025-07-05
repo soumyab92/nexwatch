@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { Link } from 'react-router-dom';
 const HeroSlider = () => {
     return (
         <section id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -17,7 +16,7 @@ const HeroSlider = () => {
                         <h2>Time Reimagined. Style Redefined.</h2>
                         <h1>FLAT 35% OFF</h1>
                         <h3>Make a Rich Life</h3>
-                        <a href="/shop" className="common-btn">Explore</a>
+                        <Link to="/shop" className="common-btn">Explore</Link>
                     </div>
                 </div>
 
@@ -33,7 +32,7 @@ const HeroSlider = () => {
                         <h2>Time Reimagined. Style Redefined.</h2>
                         <h1>FLAT 50% OFF</h1>
                         <h3>Make a Rich Life</h3>
-                        <a href="/shop" className="common-btn">Explore</a>
+                        <Link to="/shop" className="common-btn">Explore</Link>
                     </div>
                 </div>
 
