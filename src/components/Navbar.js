@@ -74,7 +74,6 @@ const Navbar = () => {
             >
               <img src="/images/search.svg" alt="search" />
             </button>
-            {/* <a className="icon-btn"><img src="/images/search.svg" alt="search" /></a> */}
             <a className="icon-btn"><img src="/images/user-Icon.svg" alt="user" /></a>
 
             <Link to="/cart" className="icon-btn position-relative">
