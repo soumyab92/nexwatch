@@ -1,9 +1,8 @@
-import React from 'react';
 import Slider from 'react-slick';
 
 const Reviews = () => {
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     speed: 600,

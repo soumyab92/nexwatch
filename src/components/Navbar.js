@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white">
+      <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
 
           {/* Logo */}

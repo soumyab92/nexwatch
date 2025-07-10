@@ -36,13 +36,13 @@ const NewProducts = () => {
             <h3 className="com_sub_title">
               Handpicked timepieces that define sophistication and style.
             </h3>
-            <Slider {...settings} className="slide_3">
+            <Slider {...settings} className="trending_slider slide_3">
               {newProducts.map((product) => (
                 <div className="pro_main_box" key={product.id}>
                   <div className="img-box position-relative">
                     <img src={product.image} className="img-fluid" alt={product.name} />
                     <div className="offer_badge"><p>New</p></div>
-                    <div className="cta_container d-flex flex-column">
+                    <div className="cta_container d-flex">
                       <Link to={`/product/${product.id}`}>BUY NOW</Link>
                       <button
                         className="btn btn-sm btn-outline-dark mt-1"

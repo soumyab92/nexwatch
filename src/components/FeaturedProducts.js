@@ -47,7 +47,7 @@ const FeaturedProducts = () => {
                   <div className="img-box position-relative">
                     <img src={product.image} className="img-fluid" alt={product.name} />
                     <div className="offer_badge"><p>New</p></div>
-                    <div className="cta_container d-flex flex-column">
+                    <div className="cta_container d-flex">
                       <Link to={`/product/${product.id}`}>BUY NOW</Link>
                       <button
                         className="btn btn-sm btn-outline-dark mt-1"

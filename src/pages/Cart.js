@@ -1,23 +1,14 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, updateQty } from '../redux/cartSlice';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
 
   // Helper to clean price
   const parsePrice = (val) =>
     parseFloat(val?.toString().replace(/[^0-9.]/g, '') || 0);
-
-  // Redirect to shop if cart is empty
-  useEffect(() => {
-    if (cartItems.length === 0) {
-      navigate('/shop');
-    }
-  }, [cartItems, navigate]);
 
   // Quantity handler
   const handleQtyChange = (product, type) => {

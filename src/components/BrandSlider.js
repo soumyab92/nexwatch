@@ -18,6 +18,21 @@ const BrandSlider = () => {
     }
   });
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      { breakpoint: 992, settings: { slidesToShow: 2 } },
+      { breakpoint: 576, settings: { slidesToShow: 1 } },
+    ],
+  };
+
   return (
     <section className="trending_sec p_80">
       <div className="container">
@@ -27,22 +42,8 @@ const BrandSlider = () => {
             <h3 className="com_sub_title">
               Discover top picks tailored to your style and needs.
             </h3>
-            <Slider
-              slidesToShow={5}
-              autoplay
-              arrows={false}
-              dots={false}
-              responsive={[
-                {
-                  breakpoint: 992,
-                  settings: { slidesToShow: 3 }
-                },
-                {
-                  breakpoint: 576,
-                  settings: { slidesToShow: 2 }
-                }
-              ]}
-            >
+            <Slider {...settings} className="trending_slider">
+            
               {[...uniqueBrands.values()].map((brand, index) => (
                 <div key={index} className="brand_logo_box text-center px-2">
                   <img src={brand.logo} alt={brand.name} className="img-fluid" />

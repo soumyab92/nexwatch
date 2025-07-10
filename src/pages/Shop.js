@@ -52,7 +52,7 @@ const Shop = () => {
                                         <div className="offer_badge">
                                             <p>New</p>
                                         </div>
-                                        <div className="cta_container d-flex flex-column">
+                                        <div className="cta_container d-flex">
                                             <Link to={`/product/${product.id}`} className="btn btn-sm btn-primary">
                                                 BUY NOW
                                             </Link>

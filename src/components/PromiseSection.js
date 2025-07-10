@@ -26,14 +26,14 @@ const promises = [
 const PromiseSection = () => {
   return (
     <section className="promise_sec">
-      <div className="container py-4">
+      <div className="container">
         <div className="row text-center text-md-start">
           {promises.map((item, index) => (
             <div
               key={index}
-              className="col-6 col-md-3 mb-3 mb-md-0 d-lg-flex text-center text-lg-start align-items-center"
+              className="col-6 col-md-6 mb-3 mb-lg-0 d-lg-flex text-center text-lg-start align-items-center"
             >
-              <img src={item.icon} alt="icon" className="me-4" />
+              <img src={item.icon} alt="icon" className="mb-2 mb-lg-0 me-lg-4" />
               <div>
                 <h6>{item.title}</h6>
                 <small className="text-muted">{item.subtitle}</small>
