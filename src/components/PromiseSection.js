@@ -31,7 +31,7 @@ const PromiseSection = () => {
           {promises.map((item, index) => (
             <div
               key={index}
-              className="col-6 col-md-6 mb-3 mb-lg-0 d-lg-flex text-center text-lg-start align-items-center"
+              className="col-6 col-md-6 col-lg-3 mb-3 mb-lg-0 d-lg-flex text-center text-lg-start align-items-center"
             >
               <img src={item.icon} alt="icon" className="mb-2 mb-lg-0 me-lg-4" />
               <div>

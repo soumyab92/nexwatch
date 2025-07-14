@@ -391,6 +391,7 @@ nav.navbar {
 .pro_main_box .img-box img {
   border-radius: 5px;
   overflow: hidden;
+  width: 100%;
 }
 
 .offer_badge p {
@@ -601,6 +602,7 @@ footer.bg-dark {
 
 footer .logo_brand {
   max-width: 320px;
+  width: 100%;
 }
 
 footer .desc_box p {
@@ -810,25 +812,68 @@ footer h4 {
     font-size: 22px;
     margin-bottom: 5px;
   }
-.promise_sec,
+
+  .promise_sec,
   .p_80 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .about_us_sec ul li h3 {
     font-size: 20px;
   }
+
   .about_us_sec ul li h4 {
     font-size: 16px;
   }
+
   .about_us_sec ul {
     margin-top: 20px;
   }
+
   .about_us_sec p {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 10px;
-}
+  }
 }
 
-@media (max-width: 776px) {}
+@media (max-width: 776px) {
+  .carousel-fade .carousel-item img {
+    height: 200px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .carousel-caption h3,
+  .carousel-caption h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .common-btn {
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+
+  .about_us_sec a,
+  .common-btn {
+    min-width: 110px;
+  }
+  .service_highlights ul li p, .service_highlights ul li h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .com_title {
+      font-size: 24px;
+    }
+    .com_sub_title {
+      font-size: 16px;
+      max-width: 80%;
+    }
+}

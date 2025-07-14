@@ -26,7 +26,7 @@ const Navbar = () => {
           </Link>
 
           {/* Mobile Cart Icon */}
-          <Link to="/cart" className="icon-btn position-relative d-block ms-auto d-md-none">
+          <Link to="/cart" className="icon-btn position-relative d-block ms-auto d-lg-none">
             <img src="/images/cart-Icon.svg" alt="cart" />
             {cartCount > 0 && (
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Icons */}
-          <div className="d-flex align-items-center d-none d-md-block">
+          <div className="d-flex align-items-center d-none d-lg-block">
             <button
               onClick={() => setShowSearch(true)}
               className="icon-btn position-relative bg-transparent border-0"

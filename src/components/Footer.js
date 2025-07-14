@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           {/* Company Info */}
-          <div className="col-md-4 mb-4 desc_box">
+          <div className="col-md-12 col-lg-4 mb-4 desc_box">
             <div className="mb-3">
               <img
                 src="/images/white-logo.png"
                 srcSet="/images/white-logo@2x.png 2x, /images/white-logo@3x.png 3x"
                 alt="NexWatch Logo"
-                className="logo_brand"
+                className="logo_brand img-fluid"
               />
             </div>
             <p>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Links Column 1 */}
-          <div className="col-md-2 col-6 mb-4">
+          <div className="col-6 col-md-3 col-lg-2 col-6 mb-4">
             <ul className="list-unstyled common_ul">
               <li><Link to="/" className="text-decoration-none">About Us</Link></li>
               <li><Link to="/" className="text-decoration-none">Services</Link></li>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
 
           {/* Links Column 2 */}
-          <div className="col-md-2 col-6 mb-4">
+          <div className="col-6 col-md-3 col-lg-2 col-6 mb-4">
             <ul className="list-unstyled common_ul">
               <li><Link to="/" className="text-decoration-none">Support</Link></li>
               <li><Link to="/" className="text-decoration-none">Knowledge Base</Link></li>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Subscribe and Payments */}
-          <div className="col-md-4 mb-4">
+          <div className="col-12 col-md-6 col-lg-4 mb-4">
             <h6><i className="far fa-envelope"></i> Subscribe Us</h6>
             <form className="d-flex">
               <input type="email" className="form-control" placeholder="Enter your Email" />

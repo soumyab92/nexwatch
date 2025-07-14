@@ -6,7 +6,7 @@ const ServiceHighlights = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <ul className="d-flex flex-wrap justify-content-between list-unstyled p-0 m-0">
+            <ul className="d-flex list-unstyled p-0 m-0">
               <li className="d-flex align-items-center gap-3">
                 <img src="/images/icon-1.svg" alt="icon-1" />
                 <div className="content">
