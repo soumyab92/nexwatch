@@ -1,5 +1,3 @@
-import React from 'react';
-
 const promises = [
   {
     icon: '/images/Online-Support.svg',

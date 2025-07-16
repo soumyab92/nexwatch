@@ -133,6 +133,10 @@ table {
   border-spacing: 0;
 }
 
+.navbar-brand {
+  padding: 0;
+}
+
 .promo-bar {
   background-color: var(--theme-dark);
   color: white;
@@ -355,7 +359,7 @@ nav.navbar {
 
 .trending_sec .slick-prev,
 .trending_sec .slick-next {
-  background: #000;
+  background: #2162be;
   right: 0;
   top: -70px;
   transform: unset;
@@ -681,7 +685,30 @@ footer h4 {
 .copy-rights a {
   color: #fff;
 }
+/* Product Section */
+.rw-rating {
+  padding: 10px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
 
+.rw-rating .one-star {
+  color: var(--theme-dark);
+  margin-right: 10px;
+}
+
+.rw-rating p {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+.product_info h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 35px;
+}
 @media (max-width: 1400px) {
 
   .carousel-caption h2,
@@ -749,6 +776,44 @@ footer h4 {
 
 .search-modal-overlay {
   backdrop-filter: blur(3px);
+}
+
+.page_banner {
+  height: 400px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.page_banner h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.page_banner p {
+  font-size: 20px;
+}
+
+.shop_list_page {
+  background-color: #F2F2F5;
+}
+
+.shop_list_page .shop_title {
+  font-size: 16px;
+  color: #000;
+}
+
+.product_detail .slick-track {
+  gap: 9px;
+}
+
+.product_detail .slick-track .slick-slide {
+  margin: unset;
+}
+
+.product-gallery .main-image img {
+  width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -836,6 +901,10 @@ footer h4 {
     line-height: 20px;
     margin-bottom: 10px;
   }
+
+  .page_banner {
+    height: 300px;
+  }
 }
 
 @media (max-width: 776px) {
@@ -865,15 +934,39 @@ footer h4 {
   .common-btn {
     min-width: 110px;
   }
-  .service_highlights ul li p, .service_highlights ul li h2 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    .com_title {
-      font-size: 24px;
-    }
-    .com_sub_title {
-      font-size: 16px;
-      max-width: 80%;
-    }
+
+  .service_highlights ul li p,
+  .service_highlights ul li h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .com_title {
+    font-size: 24px;
+  }
+
+  .com_sub_title {
+    font-size: 16px;
+    max-width: 75%;
+  }
+
+  .about_us_sec .com_title {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .about_us_sec ul {
+    column-gap: 0px;
+    justify-content: space-between;
+  }
+
+  .page_banner {
+    height: 200px;
+  }
+}
+
+@media(max-width:410px) {
+  .about_us_sec ul li h4 {
+    font-size: 14px;
+  }
 }

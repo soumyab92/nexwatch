@@ -60,7 +60,7 @@ const Reviews = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2 class="com_title">Testimonial</h2>
+            <h2 className="com_title">Testimonial</h2>
             <Slider {...settings} className="review">
               {reviewData.map((item, index) => (
                 <div className="review_main_box text-center" key={index}>

@@ -32,7 +32,7 @@ const Cart = () => {
         <div className="row gy-4">
           {/* Cart Content */}
           <div className="col-lg-8">
-
+            
             {cartItems.length === 0 ? (
               <div className="text-left py-5">
                 {/* <img
@@ -48,9 +48,10 @@ const Cart = () => {
                 </Link>
               </div>
             ) : (
-              cartItems.map((item) => (
-                <>
-                <h2>Shopping Cart</h2>
+             <div><h2>Shopping Cart</h2>
+              {
+                cartItems.map((item) => (
+                
                 <div
                   key={item.id}
                   className="d-flex align-items-center justify-content-between p-3 mb-3 shadow-sm bg-white rounded"
@@ -92,8 +93,9 @@ const Cart = () => {
                     </button>
                   </div>
                 </div>
-                </>
               ))
+              }
+              </div>
             )}
           </div>
 

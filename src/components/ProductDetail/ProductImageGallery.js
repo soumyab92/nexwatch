@@ -11,7 +11,7 @@ const ProductImageGallery = ({ mainImage, gallery = [] }) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: Math.min(4, images.length),
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
     focusOnSelect: true,
@@ -40,14 +40,7 @@ const ProductImageGallery = ({ mainImage, gallery = [] }) => {
               <img
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
-                className={`img-fluid border ${
-                  img === activeImage ? 'border-primary' : 'border-light'
-                } rounded`}
-                style={{
-                  height: '80px',
-                  objectFit: 'contain',
-                  cursor: 'pointer',
-                }}
+                className={`img-fluid`}
               />
             </div>
           ))}

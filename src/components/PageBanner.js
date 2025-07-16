@@ -14,14 +14,14 @@ const PageBanner = ({ title }) => {
     <section
       className="page_banner text-white py-5"
       style={{
-        backgroundImage: "url('/images/banner-bg.jpg')",
+        backgroundImage: "url('/images/inner-banner.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="container">
-        <h2 className="fw-bold">{title}</h2>
-        <p className="mt-2">
+        <h2>{title}</h2>
+        <p>
           <Link to="/" className="text-white text-decoration-none">Home</Link>
           {paths.map((p, i) => (
             <span key={i}>

@@ -50,7 +50,7 @@ const FeaturedProducts = () => {
                     <div className="cta_container d-flex">
                       <Link to={`/product/${product.id}`}>BUY NOW</Link>
                       <button
-                        className="btn btn-sm btn-outline-dark mt-1"
+                        className="btn btn-sm btn-outline-dark"
                         onClick={() => dispatch(addToCart(product))}
                       >
                         Add to Cart

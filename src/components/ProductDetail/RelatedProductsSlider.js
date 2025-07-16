@@ -1,9 +1,9 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../../redux/cartSlice';
-import products from '../../data/products';
+import React from "react";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartSlice";
+import products from "../../data/products";
 
 const RelatedProductsSlider = ({ currentProductId, brandName }) => {
   const dispatch = useDispatch();
@@ -15,12 +15,12 @@ const RelatedProductsSlider = ({ currentProductId, brandName }) => {
   const settings = {
     dots: false,
     infinite: false,
+    arrows: true,
     speed: 600,
     centerMode: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
-    arrows: false,
     responsive: [
       { breakpoint: 992, settings: { slidesToShow: 2 } },
       { breakpoint: 576, settings: { slidesToShow: 1 } },
@@ -28,8 +28,8 @@ const RelatedProductsSlider = ({ currentProductId, brandName }) => {
   };
 
   const formatPrice = (value) => {
-    if (!value) return '$0';
-    return `$${parseFloat(value.replace(/[^\d.]/g, '')).toFixed(2)}`;
+    if (!value) return "$0";
+    return `$${parseFloat(value.replace(/[^\d.]/g, "")).toFixed(2)}`;
   };
 
   return (
@@ -48,10 +48,10 @@ const RelatedProductsSlider = ({ currentProductId, brandName }) => {
                 <div className="offer_badge">
                   <p>New</p>
                 </div>
-                <div className="cta_container d-flex flex-column">
+                <div className="cta_container d-flex">
                   <Link to={`/product/${product.id}`}>BUY NOW</Link>
                   <button
-                    className="btn btn-sm btn-outline-dark mt-1"
+                    className="btn btn-sm btn-outline-dark"
                     onClick={() => dispatch(addToCart(product))}
                   >
                     Add to Cart

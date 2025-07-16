@@ -30,7 +30,7 @@ const ProductDetail = () => {
         <div className="container">
           <div className="row g-4">
             {/* Left: Gallery */}
-            <div className="col-md-6">
+            <div className="col-md-5">
               <ProductImageGallery
                 mainImage={product.image}
                 gallery={product.gallery || []}
@@ -38,7 +38,17 @@ const ProductDetail = () => {
             </div>
 
             {/* Right: Info + Actions */}
-            <div className="col-md-6">
+            <div className="col-md-7">
+              <div className="rw-rating d-inline-flex align-items-center">
+                <span className="one-star">
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
+                </span>
+                <p className="rated">Rated 4.76/5 based on +1475 reviews</p>
+              </div>
               <ProductInfo
                 name={product.name}
                 price={product.price}

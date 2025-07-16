@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white sticky-top">
+      <nav className="navbar navbar-expand-lg bg-white sticky-top shadow">
         <div className="container">
 
           {/* Logo */}
@@ -53,12 +53,6 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className={isActive('/shop')} to="/shop">Shop</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={isActive('/about')} to="/about">About Us</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={isActive('/blog')} to="/blog">Blog</Link>
               </li>
               <li className="nav-item">
                 <Link className={isActive('/contact')} to="/contact">Contact Us</Link>
