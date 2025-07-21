@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, updateQty } from '../redux/cartSlice';
 import { Link } from 'react-router-dom';
+import PageBanner from "../components/PageBanner";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,8 @@ const Cart = () => {
   }, 0);
 
   return (
+    <>
+    <PageBanner title="My Cart" />
     <section className="cart_sec p_80">
       <div className="container">
         <div className="row gy-4">
@@ -48,19 +51,18 @@ const Cart = () => {
                 </Link>
               </div>
             ) : (
-             <div><h2>Shopping Cart</h2>
+             <div className='cart_main_box'><h2>Shopping Cart</h2>
               {
                 cartItems.map((item) => (
                 
                 <div
                   key={item.id}
-                  className="d-flex align-items-center justify-content-between p-3 mb-3 shadow-sm bg-white rounded"
+                  className="d-flex align-items-center justify-content-between cart_pro_box"
                 >
-                  <div className="d-flex align-items-center gap-3">
                     <img src={item.image} alt={item.name} width="80" />
                     <div>
-                      <h5 className="mb-1">{item.name}</h5>
-                      <div className="d-flex align-items-center">
+                      <h5>{item.name}</h5>
+                      <div className="cart_control d-flex align-items-center">
                         <button
                           type="button"
                           onClick={() => handleQtyChange(item, 'dec')}
@@ -68,7 +70,7 @@ const Cart = () => {
                         >
                           -
                         </button>
-                        <span className="mx-2">{item.qty}</span>
+                        <span>{item.qty}</span>
                         <button
                           type="button"
                           onClick={() => handleQtyChange(item, 'inc')}
@@ -78,20 +80,20 @@ const Cart = () => {
                         </button>
                       </div>
                     </div>
-                  </div>
-                  <div className="d-flex align-items-center gap-3">
+                  
+                 
                     <p className="mb-0 fw-bold">
                       ${parsePrice(item.sale || item.price).toFixed(2)}
                     </p>
                     <button
                       type="button"
                       onClick={() => handleRemove(item.id)}
-                      className="btn btn-outline-danger"
+                      className="btn"
                       aria-label="Remove item"
                     >
-                      <i className="fas fa-trash" />
+                      <img src='images/cart_box_icon.svg' alt='svg cart icon'/>
                     </button>
-                  </div>
+                  
                 </div>
               ))
               }
@@ -102,16 +104,16 @@ const Cart = () => {
           {/* Order Summary */}
           {cartItems.length > 0 && (
             <div className="col-lg-4">
-              <div className="border rounded p-4 shadow-sm bg-white">
+              <div className="cart_summary_box">
                 <h4>Order Summary</h4>
-                <div className="d-flex justify-content-between mb-2">
-                  <span>Subtotal</span>
+                <div className="d-flex sub_total_box">
+                  <p>Subtotal</p>
                   <span className="fw-bold">${subtotal.toFixed(2)}</span>
                 </div>
-                <small className="text-muted d-block mb-3">
+                <p className="sub_total_box_text">
                   By continuing to checkout, you agree to our Terms of Use and Privacy Policy.
-                </small>
-                <Link to="/checkout" className="btn btn-primary w-100">
+                </p>
+                <Link to="/checkout" className="cart_summary_box_btn">
                   Checkout
                 </Link>
               </div>
@@ -120,6 +122,7 @@ const Cart = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

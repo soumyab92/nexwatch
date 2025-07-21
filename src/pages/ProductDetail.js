@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/cartSlice';
-import products from '../data/products';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
+import products from "../data/products";
 
-import ProductImageGallery from '../components/ProductDetail/ProductImageGallery';
-import ProductInfo from '../components/ProductDetail/ProductInfo';
-import ProductActions from '../components/ProductDetail/ProductActions';
-import ProductTabs from '../components/ProductDetail/ProductTabs';
-import ProductReviewSection from '../components/ProductDetail/ProductReviewSection';
-import RelatedProductsSlider from '../components/ProductDetail/RelatedProductsSlider';
-import PageBanner from '../components/PageBanner';
+import ProductImageGallery from "../components/ProductDetail/ProductImageGallery";
+import ProductInfo from "../components/ProductDetail/ProductInfo";
+import ProductActions from "../components/ProductDetail/ProductActions";
+import ProductTabs from "../components/ProductDetail/ProductTabs";
+import ProductReviewSection from "../components/ProductDetail/ProductReviewSection";
+import RelatedProductsSlider from "../components/ProductDetail/RelatedProductsSlider";
+import PageBanner from "../components/PageBanner";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = products.find(p => p.id.toString() === id);
+  const product = products.find((p) => p.id.toString() === id);
   const [qty, setQty] = useState(1);
 
   if (!product) {
@@ -61,9 +61,23 @@ const ProductDetail = () => {
               <ProductActions
                 onAddToCart={() => dispatch(addToCart({ ...product, qty }))}
               />
+              <p className="extra_utility">
+                Sku: <span>SKU_45</span>
+              </p>
+              <p className="extra_utility">
+                Available: <span>2</span>
+              </p>
+              <div className="checkout_card">
+                <h2>Secure Checkout</h2>
+                <img
+                  src="/images/secure_payments-1.png"
+                  srcSet="/images/secure_payments-1@2x.png 2x, /images/secure_payments-1@3x.png 3x"
+                  className="img-fluid"
+                  alt="About NexWatch"
+                />
+              </div>
             </div>
           </div>
-
           {/* Tabs, Reviews, Related Slider */}
           <ProductTabs
             description={product.desc}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
@@ -16,7 +15,7 @@ const AboutUs = () => {
             />
           </div>
 
-          <div className="col-md-6 text-center text-mb-left">
+          <div className="col-md-6 text-center text-md-start">
             <h2 className="com_title">About Us</h2>
             <p>
               At Nex Watch, we believe a watch is more than just a timekeeper—it's a statement. 

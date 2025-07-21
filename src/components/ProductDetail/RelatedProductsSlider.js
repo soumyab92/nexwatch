@@ -14,13 +14,13 @@ const RelatedProductsSlider = ({ currentProductId, brandName }) => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     arrows: true,
     speed: 600,
     centerMode: false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     responsive: [
       { breakpoint: 992, settings: { slidesToShow: 2 } },
       { breakpoint: 576, settings: { slidesToShow: 1 } },
@@ -34,7 +34,8 @@ const RelatedProductsSlider = ({ currentProductId, brandName }) => {
 
   return (
     <section className="related_products mt-5">
-      <h3 className="mb-4">Related Products</h3>
+      <h2 className="com_title">Related Products</h2>
+      <h3 className="com_sub_title">Handpicked timepieces that define sophistication and style.</h3>
       <Slider {...settings} className="trending_slider slide_1">
         {related.map((product) => (
           <div key={product.id}>

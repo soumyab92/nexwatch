@@ -10,11 +10,11 @@ const ProductActions = ({ onAddToCart }) => {
   };
 
   return (
-    <div className="d-flex gap-3 mt-3">
-      <button className="btn btn-outline-primary" onClick={onAddToCart}>
+    <div className="product_btn_grp">
+      <button className="addtocartbtn" onClick={onAddToCart}>
         Add To Cart
       </button>
-      <button className="btn btn-primary" onClick={handleBuyNow}>
+      <button className="buynowbtn" onClick={handleBuyNow}>
         Buy Now
       </button>
     </div>

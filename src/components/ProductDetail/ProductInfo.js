@@ -1,41 +1,62 @@
-import React from 'react';
-
-const ProductInfo = ({ name, price, sale, discount, qty, setQty, description }) => {
+const ProductInfo = ({
+  name,
+  price,
+  sale,
+  discount,
+  qty,
+  setQty,
+  description,
+}) => {
   const getNumericPrice = (value) => {
     if (!value) return 0;
-    return parseFloat(value.replace(/[^\d.]/g, ''));
+    return parseFloat(value.replace(/[^\d.]/g, ""));
   };
 
   const displayPrice = getNumericPrice(sale || price);
   const originalPrice = getNumericPrice(price);
 
-  const handleIncrease = () => setQty(prev => prev + 1);
-  const handleDecrease = () => setQty(prev => (prev > 1 ? prev - 1 : 1));
+  const handleIncrease = () => setQty((prev) => prev + 1);
+  const handleDecrease = () => setQty((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
     <div className="product_info">
-      <h2>{name}</h2>
+     <h2>{name || "Unnamed Product"}</h2>
 
       <p className="price">
-        ${displayPrice.toFixed(2)}
         {sale && (
-          <span className="ms-2 text-muted text-decoration-line-through">
+          <span className="text-decoration-line-through me-1">
             ${originalPrice.toFixed(2)}
+          </span>
+        )}
+        ${displayPrice.toFixed(2)}
+        {sale && price && (
+          <span className="cus_badge">
+            {Math.round((1 - displayPrice / originalPrice) * 100)}% OFF
           </span>
         )}
       </p>
 
       {discount && <p className="text-success">{discount}% Off</p>}
 
-      {description && (
-        <p className="product-desc mt-3">{description}</p>
-      )}
+      {description && <p className="product-desc mt-3">{description}</p>}
 
-      <div className="qty-box mt-3 d-flex align-items-center gap-2">
-        <label className="me-2">Quantity:</label>
-        <button className="btn btn-outline-secondary" onClick={handleDecrease}>−</button>
+      <div className="filter_with_color">
+        <h4>Color:</h4>
+        <ul className="filter">
+          <li className="purple active"></li>
+          <li className="red"></li>
+          <li className="black"></li>
+        </ul>
+      </div>
+
+      <div className="qty_box">
+        <button className="btn btn-outline-secondary" onClick={handleDecrease}>
+          −
+        </button>
         <span className="px-3">{qty}</span>
-        <button className="btn btn-outline-secondary" onClick={handleIncrease}>+</button>
+        <button className="btn btn-outline-secondary" onClick={handleIncrease}>
+          +
+        </button>
       </div>
     </div>
   );
