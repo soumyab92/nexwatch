@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchModal from './SearchModal';
+import LoginPopup from './LoginPopup';
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
+  const [showLogin, setShowLogin] = useState(false);
 
   // Get total quantity in cart
   const cartItems = useSelector((state) => state.cart.items);
@@ -68,7 +70,12 @@ const Navbar = () => {
             >
               <img src="/images/search.svg" alt="search" />
             </button>
-            <Link to="/" className="icon-btn"><img src="/images/user-Icon.svg" alt="user" /></Link>
+            <button
+  onClick={() => setShowLogin(true)}
+  className="icon-btn user_icon bg-transparent border-0"
+>
+  <img src="/images/user-Icon.svg" alt="user" />
+</button>
 
             <Link to="/cart" className="icon-btn position-relative">
               <img src="/images/cart-Icon.svg" alt="cart" />
@@ -82,6 +89,7 @@ const Navbar = () => {
         </div>
       </nav>
       <SearchModal show={showSearch} onClose={() => setShowSearch(false)} />
+      <LoginPopup show={showLogin} onClose={() => setShowLogin(false)} />
     </>
   );
 };
