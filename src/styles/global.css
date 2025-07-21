@@ -1269,14 +1269,14 @@ footer h4 {
 }
 
 .page_banner {
-  height: 400px;
+  height: 250px;
   display: flex;
   text-align: center;
   align-items: center;
 }
 
 .page_banner h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 25px;
 }
