@@ -1164,20 +1164,22 @@ footer h4 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
+
 .cart_summary_box_btn {
   display: inline-block;
-    width: 100%;
-    background-color: var(--theme-dark);
-    padding: 20px;
-    text-align: center;
-    border-radius: 30px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
+  width: 100%;
+  background-color: var(--theme-dark);
+  padding: 20px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
 }
+
 @media (max-width: 1400px) {
 
   .carousel-caption h2,
@@ -1304,6 +1306,79 @@ footer h4 {
 
 .product-gallery .main-image img {
   width: 100%;
+}
+
+.checkout_sec {
+  padding: 80px 0;
+}
+
+.checkout_sec h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.cart_box {
+  background-color: #FAF8F8;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cod,
+.card_checkout {
+  padding: 15px;
+  background-color: #F2F2F2;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card_checkout {
+  background-image: url(../../public/images/cards_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 158px;
+  background-position: 99% center;
+}
+
+.checkout_btn {
+  width: max-content;
+  background-color: var(--theme-dark);
+  padding: 10px 70px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  float: right;
+  margin-top: 20px;
+  border: 1px solid var(--theme-dark);
+}
+
+.checkout_sub_total p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+}
+
+.checkout_sub_total p span {
+  font-size: 22px;
 }
 
 @media (max-width: 1199px) {

@@ -33,7 +33,7 @@ const SearchModal = ({ show, onClose }) => {
         {/* Search Input */}
         <input
           type="text"
-          className="form-control mb-3"
+          className="form-control mt-2 mb-3"
           placeholder="Search products..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}

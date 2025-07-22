@@ -71,11 +71,11 @@ const Navbar = () => {
               <img src="/images/search.svg" alt="search" />
             </button>
             <button
-  onClick={() => setShowLogin(true)}
-  className="icon-btn user_icon bg-transparent border-0"
->
-  <img src="/images/user-Icon.svg" alt="user" />
-</button>
+              onClick={() => setShowLogin(true)}
+              className="icon-btn user_icon bg-transparent border-0"
+            >
+              <img src="/images/user-Icon.svg" alt="user" />
+            </button>
 
             <Link to="/cart" className="icon-btn position-relative">
               <img src="/images/cart-Icon.svg" alt="cart" />
