@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <section className="py-5 bg-light">
+    <<section className="py-5 bg-light">
       <div className="container">
         {/* Header */}
         <div className="row justify-content-center mb-4">
@@ -43,12 +43,12 @@ const Contact = () => {
               <h5>Contact Information</h5>
               <p className="mb-2"><strong>Address:</strong><br />123 Street, City, State, ZIP</p>
               <p className="mb-2"><strong>Email:</strong><br />support@example.com</p>
-              <p className="mb-0"><strong>Phone:</strong><br />+91 98765 43210</p>
+              <p className="mb-0"><strong>Phone:</strong><br />+91 9088612140</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>>
   );
 };
 
