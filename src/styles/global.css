@@ -1180,6 +1180,13 @@ footer h4 {
   text-transform: uppercase;
 }
 
+@media(min-width: 1400px) {
+  .slider_controller,
+  .carousel-caption {
+    left: 16%;
+  }
+}
+
 @media (max-width: 1400px) {
 
   .carousel-caption h2,
