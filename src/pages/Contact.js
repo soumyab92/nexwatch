@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <<section className="py-5 bg-light">
+    <section className="py-5 bg-light">
       <div className="container">
         {/* Header */}
         <div className="row justify-content-center mb-4">
