@@ -12,13 +12,11 @@ const HeroSlider = () => {
                         className="d-block w-100"
                         alt="banner-1"
                     />
-                    <div className='container'>
-                        <div className="carousel-caption">
-                            <h2>Time Reimagined. Style Redefined.</h2>
-                            <h1>FLAT 35% OFF</h1>
-                            <h3>Make a Rich Life</h3>
-                            <Link to="/shop" className="common-btn">Explore</Link>
-                        </div>
+                    <div className="carousel-caption">
+                        <h2>Time Reimagined. Style Redefined.</h2>
+                        <h1>FLAT 35% OFF</h1>
+                        <h3>Make a Rich Life</h3>
+                        <Link to="/shop" className="common-btn">Explore</Link>
                     </div>
                 </div>
 
