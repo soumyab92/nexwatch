@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ThankYou = () => {
@@ -6,10 +5,10 @@ const ThankYou = () => {
   const orderId = query.get('orderId');
 
   return (
-    <div className="container py-5 text-center">
-      <h2>🎉 Thank you for your order!</h2>
-      <p>Your order ID is <strong>{orderId}</strong>.</p>
-      <p>We’ll send you a confirmation email shortly.</p>
+    <div className="container p_80 text-center">
+      <h2 className='mb-3 text-dark'>Thank you for your order!</h2>
+      <p className='mb-3'>Your order ID is <strong className='text-dark'>{orderId}</strong>.</p>
+      <p>We'll send you a confirmation email shortly.</p>
     </div>
   );
 };
