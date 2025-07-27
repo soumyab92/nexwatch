@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 const Reviews = () => {
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 600,
     slidesToShow: 3,
@@ -61,7 +61,7 @@ const Reviews = () => {
         <div className="row">
           <div className="col-12">
             <h2 className="com_title">Testimonial</h2>
-            <Slider {...settings} className="review">
+            <Slider {...settings} className="review related_products">
               {reviewData.map((item, index) => (
                 <div className="review_main_box text-center" key={index}>
                   <div className="img_box">

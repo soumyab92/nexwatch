@@ -564,7 +564,9 @@ nav.navbar {
 .reciew_sec {
   padding: 80px 0;
 }
-
+.reciew_sec .com_title {
+  margin-bottom: 30px;
+}
 .reciew_sec .review_main_box {
   background-color: #fafafa;
   border-radius: 5px;
