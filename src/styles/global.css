@@ -564,9 +564,11 @@ nav.navbar {
 .reciew_sec {
   padding: 80px 0;
 }
+
 .reciew_sec .com_title {
   margin-bottom: 30px;
 }
+
 .reciew_sec .review_main_box {
   background-color: #fafafa;
   border-radius: 5px;
@@ -1040,6 +1042,7 @@ footer h4 {
   border: 1px solid var(--theme-dark);
   border-radius: 18px;
   align-items: center;
+  margin-bottom: 25px;
 }
 
 .sub_rev_box .content_box h6,
@@ -1183,6 +1186,7 @@ footer h4 {
 }
 
 @media(min-width: 1400px) {
+
   .slider_controller,
   .carousel-caption {
     left: 16%;
@@ -1535,7 +1539,28 @@ footer h4 {
   }
 
   .page_banner {
-    height: 200px;
+    height: 170px;
+  }
+
+  .page_banner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .page_banner p {
+    font-size: 18px;
+  }
+  .rw-rating p,
+  .rw-rating .one-star {
+    font-size: 14px;
+  }
+  .product_btn_grp button {
+    padding: 14px 25px;
+    min-width: 160px;
+  }
+  .sub_rev_box {
+    margin: 0;
+    margin-bottom: 15px;
   }
 }
 

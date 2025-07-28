@@ -40,10 +40,13 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="col-md-5 mt-4 mt-md-0">
             <div className="bg-white p-4 shadow-sm rounded">
-              <h5>Contact Information</h5>
-              <p className="mb-2"><strong>Address:</strong><br />123 Street, City, State, ZIP</p>
-              <p className="mb-2"><strong>Email:</strong><br />support@example.com</p>
-              <p className="mb-0"><strong>Phone:</strong><br />+91 9088612140</p>
+              <h5 className="mb-3">Contact Information</h5>
+              <p className="mb-2"><strong>Address:</strong></p>
+              <p className="mb-2">123 Street, City, State, ZIP</p>
+              <p className="mb-2"><strong>Email:</strong></p>
+              <p className="mb-2">support@example.com</p>
+              <p className="mb-2"><strong>Phone:</strong></p>
+              <p>+91 9088612140</p>
             </div>
           </div>
         </div>

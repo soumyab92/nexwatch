@@ -160,7 +160,7 @@ const ProductReviewSection = () => {
             key={review.id}
             className="main_rev_box col-lg-10"
           >
-            <div className="row sub_rev_box mb-5">
+            <div className="row sub_rev_box">
               <div className="content_box col-lg-8">
                 <h5>{review.date}</h5>
                 <h6>{review.name}</h6>
