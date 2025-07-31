@@ -1,18 +1,11 @@
+import PageBanner from "../components/PageBanner";
 
 const Contact = () => {
   return (
+    <>
+    <PageBanner title="Contact Us" />
     <section className="py-5 bg-light">
       <div className="container">
-        {/* Header */}
-        <div className="row justify-content-center mb-4">
-          <div className="col-md-8 text-center">
-            <h2 className="fw-bold">Contact Us</h2>
-            <p className="text-muted">
-              We’d love to hear from you. Please fill out the form below and we’ll get back to you soon.
-            </p>
-          </div>
-        </div>
-
         <div className="row">
           {/* Contact Form */}
           <div className="col-md-7">
@@ -33,7 +26,7 @@ const Contact = () => {
                 <label className="form-label">Message</label>
                 <textarea className="form-control" rows="5" placeholder="Your message" required></textarea>
               </div>
-              <button type="submit" className="btn btn-primary px-4">Send Message</button>
+              <button type="submit" className="common-btn bg-primary text-light">Send Message</button>
             </form>
           </div>
 
@@ -52,6 +45,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
