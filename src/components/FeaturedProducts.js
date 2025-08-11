@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 import { Link } from 'react-router-dom';
@@ -8,13 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 import products from '../data/products';
 
 const FeaturedProducts = () => {
-  const [featured, setFeatured] = useState([]);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const filtered = products.filter(product => product.featured);
-    setFeatured(filtered);
-  }, []);
+  const featured = products.filter(product => product.featured);
 
   const settings = {
     dots: false,
@@ -41,7 +36,7 @@ const FeaturedProducts = () => {
               Handpicked timepieces that define sophistication and style.
             </h3>
 
-            <Slider {...settings} className="trending_slider slide_1" key={featured.length}>
+            <Slider {...settings} className="trending_slider slide_1">
               {featured.map(product => (
                 <div className="pro_main_box" key={product.id}>
                   <div className="img-box position-relative">
