@@ -12,7 +12,7 @@ const NewProducts = () => {
   const dispatch = useDispatch();
   const newProducts = products.slice(-6); // latest 6 products
 
-  const settings = {
+  const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 600,
@@ -36,7 +36,7 @@ const NewProducts = () => {
             <h3 className="com_sub_title">
               Handpicked timepieces that define sophistication and style.
             </h3>
-            <Slider {...settings} className="trending_slider slide_3">
+            <Slider {...sliderSettings} className="trending_slider slide_3">
               {newProducts.map((product) => (
                 <div className="pro_main_box" key={product.id}>
                   <div className="img-box position-relative">
