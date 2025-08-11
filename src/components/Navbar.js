@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchModal from './SearchModal';
@@ -7,7 +7,7 @@ const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
-  // Get total quantity in cart
+  // total quantity in cart
   const cartItems = useSelector((state) => state.cart.items);
   const cartCount = cartItems.reduce((total, item) => total + item.qty, 0);
 

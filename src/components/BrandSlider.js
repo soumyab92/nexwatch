@@ -3,8 +3,8 @@ import products from '../data/products';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const BrandSlider = () => {
-  // Collect unique brands using a Map
+function BrandSlider () {
+  
   const uniqueBrands = new Map();
 
   products.forEach(product => {
