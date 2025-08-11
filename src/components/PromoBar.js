@@ -1,4 +1,4 @@
-const PromoBar = () => {
+function PromoBar() {
   return (
     <div className="promo-bar text-center py-2">
       <div className="container">
