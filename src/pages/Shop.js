@@ -8,8 +8,6 @@ import PageBanner from "../components/PageBanner";
 const Shop = () => {
   const dispatch = useDispatch();
   const [sortType, setSortType] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 9;
 
   const parsePrice = (value) =>
     parseFloat(value.toString().replace(/[^0-9.]/g, ""));
@@ -24,12 +22,7 @@ const Shop = () => {
     return 0;
   });
 
-  const indexOfLast = currentPage * productsPerPage;
-  const indexOfFirst = indexOfLast - productsPerPage;
-  const currentProducts = sortedProducts.slice(indexOfFirst, indexOfLast);
-  const totalPages = Math.ceil(sortedProducts.length / productsPerPage);
-  
-  const productCount = 19;
+  const productCount = sortedProducts.length;
 
   return (
     <>
@@ -52,7 +45,7 @@ const Shop = () => {
               </div>
 
               <div className="row">
-                {currentProducts.map((product) => (
+                {sortedProducts.map((product) => (
                   <div className="col-md-4 mb-4" key={product.id}>
                     <div className="pro_main_box h-100">
                       <div className="img-box position-relative">
@@ -105,28 +98,6 @@ const Shop = () => {
                 ))}
               </div>
 
-              {/* Pagination Controls */}
-              <div className="d-flex justify-content-center mt-4">
-                <nav>
-                  <ul className="pagination">
-                    {[...Array(totalPages)].map((_, i) => (
-                      <li
-                        key={i}
-                        className={`page-item ${
-                          currentPage === i + 1 ? "active" : ""
-                        }`}
-                      >
-                        <button
-                          className="page-link"
-                          onClick={() => setCurrentPage(i + 1)}
-                        >
-                          {i + 1}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
             </div>
           </div>
         </div>
