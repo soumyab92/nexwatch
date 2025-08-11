@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ServiceHighlights = () => {
   return (
     <section className="service_highlights p_80">
