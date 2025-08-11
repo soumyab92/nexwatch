@@ -3,10 +3,10 @@ import { useLocation, Link } from 'react-router-dom';
 const PageBanner = ({ title }) => {
   const location = useLocation();
 
-  // Don't show on Home page
+
   if (location.pathname === '/') return null;
 
-  // Generate breadcrumb
+
   const paths = location.pathname.split('/').filter(Boolean);
 
   return (

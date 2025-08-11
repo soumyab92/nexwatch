@@ -7,7 +7,7 @@ import products from '../data/products';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function NewProducts () {
+const NewProducts = () => {
   const dispatch = useDispatch();
   const newProducts = products.slice(-6); // latest 6 products
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-const HeroSlider = () => {
+
+function HeroSlider (){
     return (
         <section id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
             <div className="carousel-inner">
