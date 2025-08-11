@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PromoBar = () => {
   return (
     <div className="promo-bar text-center py-2">
